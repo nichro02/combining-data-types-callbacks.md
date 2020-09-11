@@ -90,5 +90,120 @@ const vendingMachine = {
     
 }
   
-  vendingMachine.vend(1)
+vendingMachine.vend(1)
   
+//Callbacks
+//1. Make a function add that takes two arguments (numbers) and sums them together
+
+const add = (int1, int2) => {
+    return (int1 + int2)
+  }
+  
+  console.log(add(2,3))
+  
+  //2. Make a function subtract that takes two arguments (numbers) and subtracts them
+  
+  const subtract = (int1, int2) => {
+    return (int1 - int2)
+  }
+  
+  console.log(subtract(22,7))
+  
+  //3. Make a function multiply that takes two arguments and multiplies them
+  
+  const multiply = (int1, int2) => {
+    return (int1 * int2)
+  }
+  
+  console.log(multiply(3,4))
+  
+  //4. Make a function divide that takes two arguments and divides them
+  
+  const divide = (int1, int2) => {
+    return (int1 / int2)
+  }
+  
+  console.log(divide(10,2))
+  
+  //5. Make a function calculate that takes three arguments. Assume the two arguments are a number ie num1, num2 and a function called operates (a callback).
+  //6. Make it so that when calculate is invoked, the callback "operates" on the numbers and returns the value.
+  
+  const operates = (int1, int2) => {
+    return (int1, int2)
+  }
+  
+  const calculate = (int1, int2, callback) => {
+    return callback(int1, int2)
+  }
+  
+  calculate(1,2,operates)
+  
+  
+  
+  //7. Call calculate 4 times, each time using one of the operation functions you wrote
+  
+  //calculate(2,3,add)
+  console.log("Calculate with add: " + calculate(2,3,add))
+  //calculate(22,7,subtract)
+  console.log("Calculate with subtract: " + calculate(22,7,subtract))
+  //calculate(3,4,multiply)
+  console.log("Calculate with multiply: " + calculate(3,4,multiply))
+  //calculate(10,2,divide)
+  console.log("Calculate with divide: " + calculate(10,2,divide))
+  
+  
+  
+  
+  
+  // Clean up this code, so that it works and has function definitions in the correct place
+  /*
+  bar();
+  const bar = () => {
+    console.log('bar here');
+  }
+  foo();
+  
+  const foo = () => {
+    console.log('foo here');
+  }
+  */
+  
+  //Re-written code:
+  const bar = () => {
+    console.log('bar here')
+  }
+  
+  bar()
+  
+  const foo = () => {
+    console.log('foo here')
+  }
+  
+  foo()
+  
+  //What is meant by the error(s) this produces?
+  /*
+  foo1();
+  
+  const foo1 ()=>{
+    console.log('hi');
+  }
+  */
+  //Error I received: Missing initializer in const declaration
+  //What that means: The function isn't formatted properly. Fixed code is below:
+  /*
+  foo1();
+  
+  const foo1 = () => {
+    console.log('hi');
+  }
+  */
+  //Next error I received: Cannot access 'foo1' before initialization
+  //What this means: I'm calling the function before it has been declared. Fixed code below:
+  
+  const foo1 = () => {
+    console.log('hi');
+  }
+  
+  foo1();
+  //Code now runs fine
