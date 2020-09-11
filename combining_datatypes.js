@@ -69,3 +69,26 @@ const powerButton = () => {
 }
   
 powerButton()()
+
+//Vending Machine Object
+// a vending machine is an object
+// it has an array of snacks (make 3 snacks)
+// snacks are objects that have a name and a price
+// a vending machine has a function vend that allows user to enter the array position (a number) of the snack and then that snack will be returned
+// Be able to call vendingMachine.vend() with a valid integer to return a snack
+
+const vendingMachine = {
+    snacks: [
+      {name: 'Snickers', price: 1.75},
+      {name: 'Doritos', price: 2.00},
+      {name: 'Starburst', price: 1.50},
+    ],
+    
+    vend: (int) => {
+      return vendingMachine.snacks[int - 1].name
+    }
+    
+}
+  
+  vendingMachine.vend(1)
+  
