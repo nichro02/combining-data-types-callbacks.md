@@ -146,7 +146,7 @@ const divisible = nums.some(num => {
 console.log(divisible)
 //Find out if some words have the letter a in them
 const hasA = panagram.some(word => {
-  return word.includes('a')
+  return word.includes('a') || word.includes('A')
 })
 
 console.log(hasA)
