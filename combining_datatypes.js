@@ -132,8 +132,8 @@ const add = (int1, int2) => {
     return (int1, int2)
   }
   
-  const calculate = (int1, int2, callback) => {
-    return callback(int1, int2)
+  const calculate = (int1, int2, operates) => {
+    return operates(int1, int2)
   }
   
   calculate(1,2,operates)
