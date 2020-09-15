@@ -144,9 +144,33 @@ const divisible = nums.some(num => {
 })
 
 console.log(divisible)
+
 //Find out if some words have the letter a in them
 const hasA = panagram.some(word => {
   return word.includes('a') || word.includes('A')
 })
 
 console.log(hasA)
+
+//Hungry for More
+//Reduce
+//Add all the numbers in the array together using the reduce method
+console.log(nums.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue
+  }))
+  console.log(nums)
+  
+  //concatenate all the words using reduce
+  console.log(panagram.reduce((accumulator, currentValue) => {
+    return accumulator + " " + currentValue
+  }))
+  console.log(panagram)
+  
+  //What happens to the arrays?
+  //The original arrays are preserved. If we want to store the value returned in the reduce function, we'd need to create a variable
+  
+  
+  //Array Methods Challenge Problems
+  //I didn't get the chance to write any code for the is panagram problem, but this is my line of thinking about how I'd go about coding item
+  //I think one way to set up this code is similar to the problem where I was asked to find if some words have the letter "a" in them. Basically, write a function using the some() method that loops over each word in the array panagram and implements a test to the effect that word.includes('a') is run for all 26 letters.
+  //I would probably transform the array to all lowercase for the sake of brevity
